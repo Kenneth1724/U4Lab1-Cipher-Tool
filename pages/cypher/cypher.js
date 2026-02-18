@@ -43,14 +43,6 @@ def encoded(txt, keyshift):
 
 
 
-def bruteforce(attack):
-  brute_force = []
-  for keyshift in range (26):
-    brute = decoded(attack, keyshift)
-    brute_force.append(brute)
-  force_brute = "\n".join(brute_force)
-  return force_brute
-
 
 
 
