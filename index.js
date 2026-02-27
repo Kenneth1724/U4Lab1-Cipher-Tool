@@ -88,7 +88,6 @@ function decode(txt, keyshift){
 }
 
 
-
 function encoded(txt, keyshift){
   aplhabet = "abcdefghijklmnopqrstuvwxyz"
   user = txt.lower()
@@ -101,3 +100,4 @@ function encoded(txt, keyshift){
         encode += text;
     }
   return ceaser
+}
