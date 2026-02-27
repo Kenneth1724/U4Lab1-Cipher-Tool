@@ -51,3 +51,53 @@ function keyPress(letter){
 
 
 }
+
+key_shift = document.getElementById("key_shift")
+
+function vaildate(){
+  let number = Number(key_shift)
+
+  if (number === 0 || number > 0){
+    return number;
+  } else{
+    alertx = document.getElementById("alert")
+    alert.textContent = "enter the correct number"
+    keyshift.textContent = 0
+  }
+}   
+
+
+
+
+function decode(txt, keyshift){
+  aplhabet = "abcdefghijklmnopqrstuvwxyz"
+  user = txt.lower()
+  let ceaser = ""
+  for (let i = 0; i < text.length; i = i +1){
+        let text = user[i]
+        let index = aplhabet.indexOf(letter)
+        if (index !== -1){
+            let encoder = (index-keyshift)% 26;
+            encode = encode + aplhabet[encoder]
+        }
+        else{
+        encode += text;
+             }
+    }
+  return ceaser
+}
+
+
+
+function encoded(txt, keyshift){
+  aplhabet = "abcdefghijklmnopqrstuvwxyz"
+  user = txt.lower()
+  let ceaser = ""
+  for (let i = 0; i < text.length; i = i +1){
+        let text = user[i]
+        let index = aplhabet.indexOf(letter)
+        let encoder = (index+keyshift)% 26;
+        encode = encode + aplhabet[encoder]
+        encode += text;
+    }
+  return ceaser
